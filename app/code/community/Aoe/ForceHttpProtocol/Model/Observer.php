@@ -8,7 +8,7 @@ class Aoe_ForceHttpProtocol_Model_Observer
         $https = array_filter(array_map('trim', explode("\n", trim(Mage::getStoreConfig('system/aoe_forcehttpprotocol/https')))));
         $response = Mage::app()->getResponse();
         $request = Mage::app()->getRequest();
-        $url = Mage::helper('core/http')->getHttpHost() . Mage::helper('core/http')->getRequestUri();
+        $url = Mage::helper('core/http')->getHttpHost() . $_SERVER['REQUEST_URI'];
 
         if ($request->isSecure() && in_array($event->getControllerAction()->getFullActionName(), $http)) {
             $response->setRedirect('http://' . $url, 302);
