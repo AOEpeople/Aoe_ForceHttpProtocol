@@ -1,4 +1,2 @@
-modman modman
-app/code/community/Aoe/ForceHttpProtocol/Model/Observer.php app/code/community/Aoe/ForceHttpProtocol/Model/Observer.php
-app/code/community/Aoe/ForceHttpProtocol/etc/config.xml app/code/community/Aoe/ForceHttpProtocol/etc/config.xml
+app/code/community/Aoe/ForceHttpProtocol/ app/code/community/Aoe/ForceHttpProtocol/
 app/etc/modules/Aoe_ForceHttpProtocol.xml app/etc/modules/Aoe_ForceHttpProtocol.xml
