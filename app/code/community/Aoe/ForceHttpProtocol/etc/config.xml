@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <aoe_forcehttpprotocol>
+                <class>Aoe_ForceHttpProtocol_Model</class>
+            </aoe_forcehttpprotocol>
+        </models>
+    </global>
+
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <aoe_forcehttpprotocol>
+                        <type>singleton</type>
+                        <class>aoe_forcehttpprotocol/observer</class>
+                        <method>controllerActionPredispatch</method>
+                    </aoe_forcehttpprotocol>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+
+    <default>
+        <system>
+            <aoe_forcehttpprotocol>
+                <http>
+                    catalog_category_view
+                    catalog_product_view
+                </http>
+                <https></https>
+            </aoe_forcehttpprotocol>
+        </system>
+    </default>
+</config>
