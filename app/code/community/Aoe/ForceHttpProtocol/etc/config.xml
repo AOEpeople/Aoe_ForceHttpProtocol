@@ -28,6 +28,7 @@
                 <http>
                     catalog_category_view
                     catalog_product_view
+                    cms_page_view
                 </http>
                 <https></https>
             </aoe_forcehttpprotocol>
