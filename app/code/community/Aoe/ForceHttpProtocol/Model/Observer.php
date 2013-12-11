@@ -10,12 +10,12 @@ class Aoe_ForceHttpProtocol_Model_Observer
         $request = Mage::app()->getRequest();
 
         if ($request->isSecure() && in_array($event->getControllerAction()->getFullActionName(), $http)) {
-            header('Location: ' . str_replace('https://', 'http://', $request->getRequestUri()));
+            $response->setRedirect('http://' . $request->getRequestUri(), 302);
+            $response->sendResponse();
             exit;
         } else if (!$request->isSecure() && in_array($event->getControllerAction()->getFullActionName(), $https)) {
-            //$response->setRedirect(str_replace('http://', 'https://', $request->getRequestUri()), 302);
-            //$response->sendResponse();
-            header('Location: ' . str_replace('http://', 'https://', $request->getRequestUri()));
+            $response->setRedirect('https://' . $request->getRequestUri(), 302);
+            $response->sendResponse();
             exit;
         }
     }
