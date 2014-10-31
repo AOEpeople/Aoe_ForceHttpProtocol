@@ -1,0 +1,16 @@
+{
+    "name":"AOEpeople/Aoe_ForceHttpProtocol",
+    "type":"magento-module",
+    "license":"GPLv3",
+    "homepage":"https://github.com/AOEpeople/Aoe_QuoteCleaner",
+    "description":"Cronjob to remove old quotes for Magento.",
+    "authors":[
+        {
+            "name":"Bastian Ike",
+            "email":"{firstname}.{lastname}@aoe.com"
+        }
+    ],
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
